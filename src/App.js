@@ -28,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>HELLO! The current time is {currentTime}.</p>
+        <p>HELLO! The current date and time is {currentTime}.</p>
 
       </header>
     </div>
