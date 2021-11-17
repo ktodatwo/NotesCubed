@@ -1,7 +1,7 @@
 # NotesCubed
 
 ## Description
-NotesCube is a visually stunning note-taking application for creatives looking to organize ideas visually.
+NotesCubed is a visually stunning note-taking application for creatives looking to organize ideas visually.
 
 ## Features
 - User account registration and secure login.
