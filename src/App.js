@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { Notes } from './components/notes';
 
 function App() {
+
+  const[notes, setNotes] = useState([]);
+
+
+  useEffect(() => {
+    fetch('/notes').then(response => response.json().then(data => {
+      setNotes(data.notes);
+    })
+    );
+  }, []);
+
+  console.log(notes)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Notes notes={notes}/>
     </div>
   );
 }
